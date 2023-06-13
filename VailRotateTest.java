@@ -25,6 +25,26 @@ public class VailRotateTest {
     }
 
     @Test
+    public void testRotateLeftOneWithKGreaterThanNumsLength() {
+        VailRotate vailRotate = new VailRotate();
+        int[] nums = {1, 2, 3, 4, 5};
+        int k = 7;
+        int[] expected = {3, 4, 5, 1, 2};
+        vailRotate.rotateLeftOne(nums, k);
+        Assert.assertArrayEquals(expected, nums);
+    }
+
+    @Test
+    public void testRotateLeftTwoWithKGreaterThanNumsLength() {
+        VailRotate vailRotate = new VailRotate();
+        int[] nums = {1, 2, 3, 4, 5};
+        int k = 8;
+        int[] expected = {4, 5, 1, 2, 3};
+        vailRotate.rotateLeftTwo(nums, k);
+        Assert.assertArrayEquals(expected, nums);
+    }
+
+    @Test
     public void testRotateLeftOneWithNegativeShift() {
         VailRotate vailRotate = new VailRotate();
         int[] nums = {1, 2, 3, 4, 5};
